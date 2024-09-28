@@ -1,6 +1,25 @@
 .gigs {
   display: flex;
   justify-content: center;
+  color: #fff;
+  background-color: #091235;
+  z-index: 300;
+  transform: translateZ(0);
+
+  &:before {
+    content: "";
+    top: 0rem;
+    left: -10rem;
+    width: calc(100% + 20rem);
+    height: 100%;
+    z-index: 9999;
+    position: fixed;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/5c/Image_gaussian_noise_example.png);
+    opacity: 0.06;
+    pointer-events: none;
+    -webkit-animation: noise 1s steps(2) infinite;
+    animation: noise 1s steps(2) infinite;
+  }
 
   .container {
     width: 1400px;
@@ -12,11 +31,11 @@
     .breadcrumbs {
       font-weight: 300;
       font-size: 13px;
-      color: #555;
+      color: #fff;
     }
 
     p {
-      color: #999;
+      color: #fff;
       font-weight: 300;
     }
 
@@ -29,27 +48,41 @@
         display: flex;
         align-items: center;
         gap: 10px;
-        color: #555;
+        color: #fff;
         font-weight: 300;
 
         input {
           padding: 5px;
-          border: 1px solid lightgray;
+          border: 2px solid  rgba(255, 255, 255, 0.2);
           outline: none;
+          border-radius: 5px;
+          background-color: rgba(255, 255, 255, 0.1);
+
 
           &::placeholder {
-            color: gray;
+            color: white;
           }
         }
 
         button {
-          background-color: #1dbf73;
-          color: white;
-          font-weight: 500;
-          border: none;
-          cursor: pointer;
-          padding: 5px 10px;
+          display: inline-block;
+          padding: 5px 15px;
+          border: 0;
+          text-decoration: none;
           border-radius: 5px;
+          background-color: rgba(255, 255, 255, 0.1);
+          border: 2px solid rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(30px);
+          color: rgba(255, 255, 255, 0.8);
+          font-weight: 500;
+          font-size: 14px;
+          letter-spacing: 2px;
+          cursor: pointer;
+          text-transform: uppercase;
+
+          &:hover{
+            background-color: rgba(255, 255, 255, 0.3);
+          }
         }
       }
       .right {
@@ -59,7 +92,7 @@
         position: relative;
 
         .sortBy {
-          color: #555;
+          color: #fff;
           font-weight: 300;
         }
         .sortType {

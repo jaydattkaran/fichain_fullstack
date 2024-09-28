@@ -1,7 +1,26 @@
 .orders {
     display: flex;
     justify-content: center;
-    color: #555;
+    background-color: #091235;
+    height: 100vh;
+    color: #fff;
+    z-index: 300;
+    transform: translateZ(0);
+  
+    &:before {
+      content: "";
+      top: 0rem;
+      left: -1rem;
+      width: 100vw;
+      height: 100%;
+      z-index: 9999;
+      position: fixed;
+      background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/5c/Image_gaussian_noise_example.png);
+      opacity: 0.06;
+      pointer-events: none;
+      -webkit-animation: noise 1s steps(2) infinite;
+      animation: noise 1s steps(2) infinite;
+    }
   
     .container {
       width: 1400px;
@@ -30,6 +49,7 @@
             text-align: left;
           }
           td {
+            padding: 10px 10px;
             
             sup{
               font-size: 12px;

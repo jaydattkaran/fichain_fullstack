@@ -1,56 +1,87 @@
 .myGigs {
-    display: flex;
-    justify-content: center;
-    color: #555;
-  
-    .container {
-      width: 1400px;
-      padding: 50px 0px;
-  
-      .title {
-        display: flex;
-        justify-content: space-between;
-  
-        button {
-          background-color: #1dbf73;
-          color: white;
+  // width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  background-color: #091235;
+  z-index: 300;
+  transform: translateZ(0);
+
+  &:before {
+    content: "";
+    top: 0rem;
+    left: -1rem;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    position: fixed;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/5c/Image_gaussian_noise_example.png);
+    opacity: 0.06;
+    pointer-events: none;
+    -webkit-animation: noise 1s steps(2) infinite;
+    animation: noise 1s steps(2) infinite;
+  }
+
+  .container {
+    width: 1400px;
+    padding: 50px 0px;
+
+    .title {
+      display: flex;
+      justify-content: space-between;
+
+      button {
+        display: inline-block;
+          padding: 15px 15px;
+          border: 0;
+          text-decoration: none;
+          border-radius: 15px;
+          background-color: rgba(255, 255, 255, 0.1);
+          border: 2px solid rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(30px);
+          color: rgba(255, 255, 255, 0.8);
           font-weight: 500;
-          border: none;
-          padding: 10px;
+          font-size: 14px;
+          letter-spacing: 2px;
           cursor: pointer;
-        }
+          text-transform: uppercase;
+
+          &:hover{
+            background-color: rgba(255, 255, 255, 0.3);
+          }
       }
-  
-      table {
-        width: 100%;
-  
-        tr {
-          height: 50px;
-          th {
-            text-align: left;
+    }
+
+    table {
+      width: 100%;
+
+      tr {
+        height: 50px;
+        th {
+          text-align: left;
+        }
+        td {
+          padding: 10px 10px;
+          sup {
+            font-size: 12px;
           }
-          td {
-  
-            sup{
-              font-size: 12px;
-            }
-            
-            .image {
-              width: 50px;
-              height: 25px;
-              object-fit: cover;
-            }
-  
-            .delete {
-              width: 20px;
-              cursor: pointer;
-            }
-  
+
+          .image {
+            width: 50px;
+            height: 25px;
+            object-fit: cover;
           }
-          &:nth-child(even) {
-            background-color: #1dbf730f;
+
+          .delete {
+            width: 20px;
+            cursor: pointer;
           }
+        }
+        &:nth-child(even) {
+          background-color: #1dbf730f;
         }
       }
     }
   }
+}

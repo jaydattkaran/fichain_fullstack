@@ -1,6 +1,25 @@
 .gig {
     display: flex;
     justify-content: center;
+    background-color: #091235;
+    color: #fff;
+    z-index: 300;
+    transform: translateZ(0);
+  
+    &:before {
+      content: "";
+      top: 0rem;
+      left: -1rem;
+      width: 100vw;
+      height: 100%;
+      z-index: 9999;
+      position: fixed;
+      background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/5c/Image_gaussian_noise_example.png);
+      opacity: 0.06;
+      pointer-events: none;
+      -webkit-animation: noise 1s steps(2) infinite;
+      animation: noise 1s steps(2) infinite;
+    }
   
     .container {
       width: 1400px;
@@ -18,10 +37,11 @@
           font-weight: 300;
           text-transform: uppercase;
           font-size: 13px;
-          color: #555;
+          color: #fff;
         }
   
         h1 {
+          color: #fff;
         }
   
         .user {
@@ -60,11 +80,21 @@
         }
   
         .slider {
-          background-color: #F5F5F5;
+          background-color: #091235;
           img {
             max-height: 500px;
             object-fit: contain;
           }
+          .carousel-prev, .carousel-next{
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
         }
   
         h2 {
@@ -74,7 +104,6 @@
         p {
           font-weight: 300;
           line-height: 25px;
-          color: #555;
         }
   
         .seller {
@@ -82,6 +111,8 @@
           display: flex;
           flex-direction: column;
           gap: 20px;
+          
+
   
           .user {
             display: flex;
@@ -223,7 +254,7 @@
   
       .right {
         flex: 1;
-        border: 1px solid lightgray;
+        border: 1px solid rgba(255, 255, 255, 0.3);
         padding: 20px;
         border-radius: 5px;
         display: flex;
@@ -283,16 +314,31 @@
               width: 14px;
             }
           }
+
+          &::before{
+            background: none;
+          }
         }
   
         button{
-          background-color: #1dbf73;
-          padding: 10px;
-          color: white;
+          display: inline-block;
+          padding: 10px 15px;
+          border: 0;
+          text-decoration: none;
+          border-radius: 15px;
+          background-color: rgba(255, 255, 255, 0.1);
+          border: 2px solid rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(30px);
+          color: rgba(255, 255, 255, 0.8);
           font-weight: 500;
-          border: none;
           font-size: 18px;
+          letter-spacing: 2px;
           cursor: pointer;
+          text-transform: uppercase;
+
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+          }
         }
       }
     }

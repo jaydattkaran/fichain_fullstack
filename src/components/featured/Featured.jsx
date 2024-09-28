@@ -5,25 +5,24 @@ const Featured = () => {
     return (
         <div className='featured'>
             <div className='container'>
+                <div class="blob"></div>
                 <div className='left'>
-                    <h1>Find the perfect <i>freelance</i> services for your business</h1>
-                    <div className='search'>
+                    <h1>Pay in <i>Crypto,</i>Native Token Staking</h1>
+                    {/* <h1>Native Token Staking</h1> */}
+                    <p>NFT Resumes No single point of failure</p>
+                    {/* <div className='search'>
                         <div className='searchInput'>
                             <img src='./img/search.png' alt='' />
                             <input type='text' placeholder='Try "building mobile app"' />
                         </div>
                         <button>Search</button>
-                    </div>
+                    </div> */}
                     <div className='popular'>
-                        <span>Popular :</span>
-                        <button>Web Design</button>
-                        <button>Wordpress</button>
-                        <button>Logo Design</button>
-                        <button>AI Services</button>
+                        <button>Sign up CTA</button>
                     </div>
                 </div>
                 <div className='right'>
-                    <img src='./img/man.png' />
+                    {/* <img src='./img/man.png' /> */}
                 </div>
             </div>
         </div>

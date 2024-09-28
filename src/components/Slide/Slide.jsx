@@ -7,7 +7,7 @@ const Slide = ({children, slidesToShow}) => {
     return (
         <div className='slide'>
             <div className='container'>
-                <Slider slidesToShow={slidesToShow} dots>
+                <Slider slidesToShow={slidesToShow} >
                    {children}
                 </Slider>
             </div>

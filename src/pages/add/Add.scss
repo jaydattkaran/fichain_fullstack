@@ -1,52 +1,92 @@
 .add {
-    display: flex;
-    justify-content: center;
-  
-    .container {
-      width: 1400px;
-      padding: 50px 0px;
-  
-      h1 {
-        width: max-content;
-        margin-bottom: 30px;
-        color: gray;
-        font-weight: 300;
+  display: flex;
+  justify-content: center;
+  background-color: #091235;
+  z-index: 300;
+  transform: translateZ(0);
+
+  &:before {
+    content: "";
+    top: 0rem;
+    left: -1rem;
+    width: 100vw;
+    height: 100%;
+    z-index: 9999;
+    position: fixed;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/5c/Image_gaussian_noise_example.png);
+    opacity: 0.06;
+    pointer-events: none;
+    -webkit-animation: noise 1s steps(2) infinite;
+    animation: noise 1s steps(2) infinite;
+  }
+
+  .container {
+    width: 1400px;
+    padding: 50px 0px;
+
+    h1 {
+      width: max-content;
+      margin-bottom: 30px;
+      color: white;
+      font-weight: 300;
+    }
+
+    .sections {
+      display: flex;
+      justify-content: space-between;
+      gap: 100px;
+
+      label {
+        color: white;
+        font-size: 18px;
       }
-  
-      .sections {
+
+      .info,
+      .details {
+        flex: 1;
         display: flex;
+        flex-direction: column;
+        gap: 10px;
         justify-content: space-between;
-        gap: 100px;
-  
-        label {
-          color: gray;
-          font-size: 18px;
-        }
-  
-        .info,
-        .details {
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-          justify-content: space-between;
-  
-          input,
-          select,
-          textarea {
-            padding: 20px;
-          }
-  
-          button {
-            border: none;
-            padding: 20px;
+
+        input,
+        select,
+        textarea {
+          border: 2px solid rgba(255, 255, 255, 0.1);
+          color: white;
+          background-color: rgba(255, 255, 255, 0.1);
+          padding: 20px;
+          border-radius: 10px;
+
+          &::placeholder{
             color: white;
-            font-weight: 500;
-            font-size: 18px;
-            background-color: #1dbf73;
-            cursor: pointer;
+          }
+        }
+       #cats{
+        background-color: #091235;
+       }
+
+        button {
+          display: inline-block;
+          padding: 15px 24px;
+          border: 0;
+          text-decoration: none;
+          border-radius: 15px;
+          background-color: rgba(255, 255, 255, 0.1);
+          border: 2px solid rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(30px);
+          color: rgba(255, 255, 255, 0.8);
+          font-weight: 500;
+          font-size: 18px;
+          letter-spacing: 2px;
+          cursor: pointer;
+          text-transform: uppercase;
+
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.3);
           }
         }
       }
     }
   }
+}

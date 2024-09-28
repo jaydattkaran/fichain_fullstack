@@ -8,25 +8,28 @@ const Footer = () => {
         <div className='top'>
           <div className='item'>
             <h2>Categories</h2>
-            <span>socials</span>
-            <span>socials</span>
+            <span>Graphics & Design</span>
+            <span>Writing & Translation</span>
+            <span>Programming & Tech</span>
           </div>
           <div className='item'>
-            <h2>Categories</h2>
-            <span>socials</span>
-            <span>socials</span>
+            <h2>For Clients</h2>
+            <span>How Fichain Works</span>
+            <span>Trust & Safety</span>
+            <span>Quality Guide</span>
           </div>
           <div className='item'>
-            <h2>Categories</h2>
-            <span>socialss</span>
-            <span>socialss</span>
+            <h2>For Freelancers</h2>
+            <span>Become a Fichain Freelancer</span>
+            <span>Community Hub</span>
+            <span>Events</span>
           </div>
         </div>
         <hr/>
         <div className='bottom'>
           <div className='left'>
-            <h2>fiverr</h2>
-            <span>Copyright text</span>
+            <h2>fichain</h2>
+            <span>© Fichain International Ltd. 2024</span>
           </div>
           <div className='right'>
             <div className='social'>
