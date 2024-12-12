@@ -3,24 +3,10 @@
   justify-content: center;
   color: #fff;
   // margin: 50px 0px;
-  background: #091235;
+  background: #000;
   z-index: 300;
   transform: translateZ(0);
 
-  &:before {
-    content: "";
-    top: 0rem;
-    left: -1rem;
-    width: 100vw;
-    height: 100%;
-    z-index: 9999;
-    position: fixed;
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/5c/Image_gaussian_noise_example.png);
-    opacity: 0.06;
-    pointer-events: none;
-    -webkit-animation: noise 1s steps(2) infinite;
-    animation: noise 1s steps(2) infinite;
-  }
 
   img {
     width: 24px;
@@ -51,7 +37,7 @@
 
     hr{
         margin: 20px 0px; 
-        border: 1px solid rgb(235, 235, 235);
+        border: 1px solid rgb(75, 74, 74);
     }
     .bottom {
         display: flex;

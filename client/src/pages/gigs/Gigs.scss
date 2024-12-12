@@ -2,24 +2,9 @@
   display: flex;
   justify-content: center;
   color: #fff;
-  background-color: #091235;
+  background-color: #000;
   z-index: 300;
   transform: translateZ(0);
-
-  &:before {
-    content: "";
-    top: 0rem;
-    left: -10rem;
-    width: calc(100% + 20rem);
-    height: 100%;
-    z-index: 9999;
-    position: fixed;
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/5c/Image_gaussian_noise_example.png);
-    opacity: 0.06;
-    pointer-events: none;
-    -webkit-animation: noise 1s steps(2) infinite;
-    animation: noise 1s steps(2) infinite;
-  }
 
   .container {
     width: 1400px;
@@ -53,7 +38,7 @@
 
         input {
           padding: 5px;
-          border: 2px solid  rgba(255, 255, 255, 0.2);
+          border: 2px solid  rgba(255, 255, 255, 0.636);
           outline: none;
           border-radius: 5px;
           background-color: rgba(255, 255, 255, 0.1);
@@ -71,7 +56,7 @@
           text-decoration: none;
           border-radius: 5px;
           background-color: rgba(255, 255, 255, 0.1);
-          border: 2px solid rgba(255, 255, 255, 0.1);
+          border: 2px solid rgba(255, 255, 255, 0.601);
           backdrop-filter: blur(30px);
           color: rgba(255, 255, 255, 0.8);
           font-weight: 500;
