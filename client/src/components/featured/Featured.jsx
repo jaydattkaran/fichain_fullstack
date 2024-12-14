@@ -7,7 +7,7 @@ const Featured = () => {
             <div className='container'>
                 <div class="blob"></div>
                 <div className='left'>
-                    <h1>Pay in <i>Crypto,</i>Native Token Staking</h1>
+                    <h1>Pay in Crypto, Native Token Staking</h1>
                     {/* <h1>Native Token Staking</h1> */}
                     <p>NFT Resumes No single point of failure</p>
                     {/* <div className='search'>
